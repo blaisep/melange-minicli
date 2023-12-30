@@ -1,0 +1,19 @@
+contents:
+  repositories:
+    - 'https://dl-cdn.alpinelinux.org/alpine/edge/main'
+    - 'https://dl-cdn.alpinelinux.org/alpine/edge/community'
+    - '/work/packages'
+  packages:
+    - alpine-baselayout-data
+    - ca-certificates-bundle
+    - hello-minicli
+accounts:
+  groups:
+    - groupname: nonroot
+      gid: 65532
+  users:
+    - username: nonroot
+      uid: 65532
+  run-as: nonroot
+entrypoint:
+  command: /usr/bin/minicli advice
